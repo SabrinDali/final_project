@@ -1,3 +1,5 @@
+import uuid
+
 """ITF 07 Final Project Attendance System
 # TODO 1 Enter your name and submission date
 Name : Sabrin Ahmed Al Dali
@@ -10,6 +12,12 @@ Delivery Date : 25.06.2023
 # course name (user_input) and
 # course mark (user_input)
 
+class Course:
+
+    def __init__(self, name, mark):
+        self.course_id = str(uuid.uuid4())
+        self.name = name
+        self.mark = mark
 
 class Student:
     # TODO 3 define static variable indicates total student count
