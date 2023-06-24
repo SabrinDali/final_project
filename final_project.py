@@ -1,7 +1,7 @@
 """ITF 07 Final Project Attendance System
 # TODO 1 Enter your name and submission date
-Name :
-Delivery Date :
+Name : Sabrin Ahmed Al Dali
+Delivery Date : 25.06.2023
 """
 
 
