@@ -95,7 +95,6 @@ while True:
             continue
 
         # TODO 10 make sure that Student number is not exists before
-        student_number = input("Enter Student Number")
 
         student_name = input("Enter Student Name")
         while True:
@@ -104,10 +103,12 @@ while True:
                 break
             except:
                 print("Invalid Value")
+        student = Student(student_name, student_age, student_number)
+        students_list.append(student)
+        print("Student Added Successfully")
 
         # TODO 11 create student object and append it to students list
 
-        print("Student Added Successfully")
 
     elif selection == 2:
         student_number = input("Enter Student Number")
