@@ -141,11 +141,29 @@ while True:
                 break
         else:
             print("Student Not Exist")
-            
+
         # TODO 14 find the target student using loops and get student average  if exist , if not print ("Student Not Exist")
 
     elif selection == 5:
         student_number = input("Enter Student Number")
+        for student in students_list:
+            if student.student_number == student_number:
+                course_name = input("Enter Course Name")
+                while True:
+                    try:
+                        course_mark = int(input("Enter Course Mark"))
+                        break
+                    except:
+                        print("Invalid Value")
+                student.enroll_course(course_name, course_mark)
+                print("Course Added Successfully")
+                break
+        else:
+            print("Student Not Exist")
+
+    elif selection == 6:
+
+
         # TODO 15 ask user to enter course name and course mark then create coures object then append it to target student courses
 
     else:
