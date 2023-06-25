@@ -88,6 +88,11 @@ while True:
                           "6.Exit"))
 
     if selection == 1:
+        student_number = input("Enter Student Number")
+
+        if any(student.student_number == student_number for student in students_list):
+            print("Student number already exists.")
+            continue
 
         # TODO 10 make sure that Student number is not exists before
         student_number = input("Enter Student Number")
