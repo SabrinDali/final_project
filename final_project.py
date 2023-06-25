@@ -31,11 +31,11 @@ class Course:
 class Student:
     total_student = 0
 
-    def __init__(self, name, age, number):
+    def __init__(self, student_name, student_age, student_number):
         self.student_id = str(uuid.uuid4())
-        self.name = input(name)
-        self.age = int(input(age))
-        self.number = int(input(number))
+        self.name = input(student_name)
+        self.age = int(input(student_age))
+        self.number = int(input(student_number))
         self.courses_list = []
         Student.total_student += 1
 
@@ -135,6 +135,13 @@ while True:
 
     elif selection == 4:
         student_number = input("Enter Student Number")
+        for student in students_list:
+            if student.student_number == student_number:
+                print(f"Student Average: {student.get_student_average()}")
+                break
+        else:
+            print("Student Not Exist")
+            
         # TODO 14 find the target student using loops and get student average  if exist , if not print ("Student Not Exist")
 
     elif selection == 5:
