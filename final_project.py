@@ -22,14 +22,15 @@ class Course:
 
 # TODO 3 define static variable indicates total student count
 
-    # TODO 4 define a constructor which includes
-    # student_id (unique using uuid module)
-    # student_name (user input)
-    # student_age (user input)
-    # student_number (user_input)
-    # courses_list (List of Course Objects)
+# TODO 4 define a constructor which includes
+# student_id (unique using uuid module)
+# student_name (user input)
+# student_age (user input)
+# student_number (user_input)
+# courses_list (List of Course Objects)
 class Student:
     total_student = 0
+
     def __init__(self, name, age, number):
         self.student_id = str(uuid.uuid4())
         self.name = input(name)
@@ -42,16 +43,15 @@ class Student:
         course = Course(course_name, course_mark)
         self.courses_list.append(course)
 
-
     # TODO 5 define a method to enroll new course to student courses list
 
     # method to get_student_details as dict
     def get_student_details(self):
         return {
             "student_id": self.student_id,
-            "student_name": self.student_name,
-            "student_age": self.student_age,
-            "student_number": self.student_number,
+            "student_name": self.name,
+            "student_age": self.age,
+            "student_number": self.number,
             "courses_list": [course.__dict__ for course in self.courses_list]
         }
 
@@ -64,8 +64,12 @@ class Student:
 
     # method to get student_average as a value
     def get_student_average(self):
+        total_marks = 0
+        for course in self.courses_list:
+            total_marks += course.course_mark
+        return total_marks / len(self.courses_list) if len(self.courses_list) > 0 else 0
+
         # TODO 7 return the student average
-        pass
 
 
 # in Global Scope
