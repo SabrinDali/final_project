@@ -162,10 +162,18 @@ while True:
             print("Student Not Exist")
 
     elif selection == 6:
+        break
+
+        else:
+        print("Invalid Selection")
+
+    except ValueError:
+    print("Invalid Selection")
 
 
         # TODO 15 ask user to enter course name and course mark then create coures object then append it to target student courses
 
-    else:
-        # TODO 16 call a function to exit the program
-        pass
+
+
+# TODO 16 call a function to exit the program
+
