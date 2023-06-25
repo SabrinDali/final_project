@@ -47,10 +47,17 @@ class Student:
 
     # method to get_student_details as dict
     def get_student_details(self):
-        return self.__dict__
+        return {
+            "student_id": self.student_id,
+            "student_name": self.student_name,
+            "student_age": self.student_age,
+            "student_number": self.student_number,
+            "courses_list": [course.__dict__ for course in self.courses_list]
+        }
 
     # method to get_student_courses
     def get_student_courses(self):
+
         # TODO 6 print student courses with their marks
         pass
 
