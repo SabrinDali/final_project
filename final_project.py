@@ -19,10 +19,8 @@ class Course:
         self.name = name
         self.mark = mark
 
-class Student:
-    total_student = 0
-    
-    # TODO 3 define static variable indicates total student count
+
+# TODO 3 define static variable indicates total student count
 
     # TODO 4 define a constructor which includes
     # student_id (unique using uuid module)
@@ -30,6 +28,17 @@ class Student:
     # student_age (user input)
     # student_number (user_input)
     # courses_list (List of Course Objects)
+class Student:
+    total_student = 0
+    def __init__(self, name, age, number):
+        self.student_id = str(uuid.uuid4())
+        self.name = input(name)
+        self.age = int(input(age))
+        self.number = int(input(number))
+        self.courses_list = []
+        Student.total_student += 1
+
+
     def __init__(self):
         pass
 
