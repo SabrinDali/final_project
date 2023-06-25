@@ -20,6 +20,8 @@ class Course:
         self.mark = mark
 
 class Student:
+    total_student = 0
+    
     # TODO 3 define static variable indicates total student count
 
     # TODO 4 define a constructor which includes
