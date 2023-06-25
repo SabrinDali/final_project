@@ -14,10 +14,10 @@ Delivery Date : 25.06.2023
 
 class Course:
 
-    def __init__(self, name, mark):
+    def __init__(self, course_name, course_mark):
         self.course_id = str(uuid.uuid4())
-        self.name = name
-        self.mark = mark
+        self.course_name = course_name
+        self.course_mark = course_mark
 
 
 # TODO 3 define static variable indicates total student count
@@ -38,9 +38,10 @@ class Student:
         self.courses_list = []
         Student.total_student += 1
 
+    def enroll_course(self, course_name, course_mark):
+        course = Course(course_name, course_mark)
+        self.courses_list.append(course)
 
-    def __init__(self):
-        pass
 
     # TODO 5 define a method to enroll new course to student courses list
 
